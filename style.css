@@ -1,0 +1,149 @@
+/* Базовые настройки */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.main-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Навигация */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8b6b47;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.top-nav nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.top-nav nav a.active { opacity: 1; border-bottom: 2px solid orange; }
+
+/* Контейнеры */
+.container {
+    display: flex;
+    gap: 20px;
+    background-color: #8b6b47;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 160px);
+    gap: 15px;
+    flex-grow: 1;
+}
+
+/* Карточки */
+.card {
+    background-color: #a9825a;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+.card img { width: 80px; height: auto; margin-bottom: 10px; }
+.card p { color: #1a1a1a; font-weight: bold; }
+
+/* Кнопки (тот самый ::before) */
+.buy-btn {
+    background: linear-gradient(to right, orange, yellow);
+    border: none;
+    padding: 10px 10px 10px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+}
+
+.buy-btn::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url("btn.png") no-repeat center;
+    background-size: contain;
+}
+
+
+/* Боковая панель */
+.sidebar {
+    width: 140px;
+    background-image: url('инженеронетот.png');
+    background-repeat: no-repeat;
+    background-color: #d2a679;
+    
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.sidebar-item {
+    background: #f5d6a3;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* Формы */
+.form-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container, .checkout-form, .order-summary {
+    background: #8b6b47;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+}
+
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; margin-bottom: 5px; }
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.checkout-container { align-items: flex-start; }
+.order-summary { background: #a9825a; color: #1a1a1a; }
+.total { font-size: 1.2rem; font-weight: bold; margin-top: 10px; }
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #a9825a;
+}
