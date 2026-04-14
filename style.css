@@ -66,6 +66,9 @@ body {
 .card:hover { transform: translateY(-5px); }
 .card img { width: 80px; height: 70px; margin-bottom: 10px; }
 .card p { color: #1a1a1a; font-weight: bold; }
+.badge top{
+    position: absolute;
+}
 
 /* Кнопки (тот самый ::before) */
 .buy-btn {
