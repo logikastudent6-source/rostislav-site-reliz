@@ -51,6 +51,10 @@ body {
 
 /* Карточки */
 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #a9825a;
     padding: 15px;
     text-align: center;
@@ -60,7 +64,7 @@ body {
 }
 
 .card:hover { transform: translateY(-5px); }
-.card img { width: 80px; height: auto; margin-bottom: 10px; }
+.card img { width: 80px; height: 70px; margin-bottom: 10px; }
 .card p { color: #1a1a1a; font-weight: bold; }
 
 /* Кнопки (тот самый ::before) */
@@ -78,11 +82,11 @@ body {
 .buy-btn::before {
     content: "";
     position: absolute;
-    left: 5px;
+    left: -3px;
     top: 50%;
     transform: translateY(-50%);
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     background: url("btn.png") no-repeat center;
     background-size: contain;
 }
